@@ -1,0 +1,16 @@
+{
+  "name": "figma-to-optimizely",
+  "owner": {
+    "name": "Sleepopolis Design"
+  },
+  "plugins": [
+    {
+      "name": "figma-to-optimizely",
+      "source": ".",
+      "description": "Convert Figma designs into production-ready Optimizely Web Experiment widgets (HTML, CSS, JS, widget.json) with a local preview server.",
+      "version": "0.1.0",
+      "category": "design-to-code",
+      "keywords": ["figma", "optimizely", "design-to-code", "ab-testing", "widget"]
+    }
+  ]
+}

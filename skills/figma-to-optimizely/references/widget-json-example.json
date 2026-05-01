@@ -1,0 +1,98 @@
+{
+  "plugin_type": "widget",
+  "name": "Example Podium Cards",
+  "edit_page_url": "https://example.com/path-to-host-page/",
+  "form_schema": [
+    {
+      "name": "selector",
+      "options": null,
+      "label": "selector",
+      "default_value": ".entry-content > h2:nth-of-type(1)",
+      "field_type": "selector"
+    },
+    {
+      "name": "imageone",
+      "options": null,
+      "label": "imageone",
+      "default_value": "https://i.example.com/product-1.webp",
+      "field_type": "image"
+    },
+    {
+      "name": "superlative1",
+      "options": null,
+      "label": "superlative1",
+      "default_value": "Best Overall",
+      "field_type": "text"
+    },
+    {
+      "name": "brand1",
+      "options": null,
+      "label": "brand1",
+      "default_value": "Helix",
+      "field_type": "text"
+    },
+    {
+      "name": "rating1",
+      "options": null,
+      "label": "rating1",
+      "default_value": "4.7",
+      "field_type": "text"
+    },
+    {
+      "name": "productname1",
+      "options": null,
+      "label": "productname1",
+      "default_value": "Midnight Mattress",
+      "field_type": "text"
+    },
+    {
+      "name": "prod1star1",
+      "options": null,
+      "label": "prod1star1",
+      "default_value": "100%",
+      "field_type": "text"
+    },
+    {
+      "name": "prod1star2",
+      "options": null,
+      "label": "prod1star2",
+      "default_value": "100%",
+      "field_type": "text"
+    },
+    {
+      "name": "prod1star3",
+      "options": null,
+      "label": "prod1star3",
+      "default_value": "100%",
+      "field_type": "text"
+    },
+    {
+      "name": "prod1star4",
+      "options": null,
+      "label": "prod1star4",
+      "default_value": "100%",
+      "field_type": "text"
+    },
+    {
+      "name": "prod1star5",
+      "options": null,
+      "label": "prod1star5",
+      "default_value": "70%",
+      "field_type": "text"
+    },
+    {
+      "name": "cta1text",
+      "options": null,
+      "label": "cta1text",
+      "default_value": "Read Review",
+      "field_type": "text"
+    },
+    {
+      "name": "cta1url",
+      "options": null,
+      "label": "cta1url",
+      "default_value": "https://example.com/reviews/midnight",
+      "field_type": "text"
+    }
+  ]
+}
