@@ -1,16 +1,22 @@
 {
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "figma-to-optimizely",
+  "description": "Convert Figma designs into production-ready Optimizely Web Experiment widgets with a local preview.",
   "owner": {
     "name": "Sleepopolis Design"
   },
   "plugins": [
     {
       "name": "figma-to-optimizely",
-      "source": ".",
       "description": "Convert Figma designs into production-ready Optimizely Web Experiment widgets (HTML, CSS, JS, widget.json) with a local preview server.",
       "version": "0.1.0",
-      "category": "design-to-code",
-      "keywords": ["figma", "optimizely", "design-to-code", "ab-testing", "widget"]
+      "category": "design",
+      "keywords": ["figma", "optimizely", "design-to-code", "ab-testing", "widget"],
+      "source": {
+        "source": "url",
+        "url": "https://github.com/andyramos-p4/figma-to-optimizely-plugin.git"
+      },
+      "homepage": "https://github.com/andyramos-p4/figma-to-optimizely-plugin"
     }
   ]
 }
