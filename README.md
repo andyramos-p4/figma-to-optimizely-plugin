@@ -53,37 +53,23 @@ Then sign into Figma when Claude prompts you.
 
 ## How to use it
 
-### 1. Start a new experiment
-
-```
-/new-experiment expandable-pbl
-```
-
-Scaffolds a folder structure:
-
-```
-experiments/expandable-pbl/
-  input/   (brief.md, copy-variants.md, hypotheses.md, target-page-notes.md)
-  output/Optimizely/   (will hold the four widget files)
-  qa/      (will hold implementation-notes.md)
-```
-
-### 2. Convert Figma to widget code
+### 1. Convert Figma to widget code
 
 Paste your Figma frame URL and run:
 
 ```
-/figma-to-optimizely https://www.figma.com/design/<fileKey>/...?node-id=<nodeId>
+/figma-to-optimizely https://www.figma.com/design/<fileKey>/...?node-id=<nodeId> <experiment-name>
 ```
 
 Claude will:
 
-1. Read the design through Figma MCP (desktop, tablet, mobile if available)
-2. Generate `index.html`, `styles.css`, `script.js`, `widget.json`
-3. Spin up a local preview server and open it in your browser
-4. Wait for you to confirm it looks right before reporting done
+1. Create the folder `experiments/<experiment-name>/output/Optimizely/` if it doesn't exist
+2. Read the design through Figma MCP (desktop, tablet, mobile if available)
+3. Generate `index.html`, `styles.css`, `script.js`, `widget.json`, plus a local `preview.html`
+4. Spin up a local preview server and open it in your browser
+5. Wait for you to confirm it looks right before reporting done
 
-### 3. QA an existing experiment
+### 2. QA an existing experiment
 
 ```
 /qa-widget expandable-pbl

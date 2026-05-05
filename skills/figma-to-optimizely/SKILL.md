@@ -16,21 +16,23 @@ Turn a Figma frame into a production-ready Optimizely Web Experiment widget. Out
 
 Before generating files, confirm the user has:
 1. A Figma URL or frame selection (desktop + mobile breakpoints ideally).
-2. An experiment folder. The canonical layout:
-   ```
-   experiments/<experiment-name>/
-     input/   (brief.md, copy-variants.md, hypotheses.md, target-page-notes.md)
-     output/Optimizely/   (index.html, styles.css, script.js, widget.json)
-     qa/      (implementation-notes.md, known-issues.md, test-cases.md)
-   ```
-   If they don't have one, run `/new-experiment <name>` first or scaffold it inline.
-3. Figma MCP available (the `mcp__plugin_figma_figma__*` tools, or `mcp__figma-desktop__*`). If not, ask them to install the Figma plugin first — without it you cannot read the design as source of truth.
+2. Figma MCP available (the `mcp__plugin_figma_figma__*` tools, or `mcp__figma-desktop__*`). If not, ask them to install the Figma plugin first — without it you cannot read the design as source of truth.
+
+The plugin creates folders on the fly. The canonical layout it produces:
+
+```
+experiments/<experiment-name>/
+  output/Optimizely/   (index.html, styles.css, script.js, widget.json)
+  qa/                  (implementation-notes.md)
+  preview.html         (local-only preview wrapper)
+```
+
+There is no `input/` folder — the team tracks briefs, hypotheses, and copy variants elsewhere (Notion). The plugin only produces what Optimizely needs plus a thin set of QA notes for the engineer.
 
 ## Workflow
 
-### 1. Read the brief and the design
+### 1. Read the design
 
-- Read `experiments/<name>/input/brief.md` if it exists (goal, target page, success metric, A/B-testable fields).
 - Parse the Figma URL: extract `fileKey` and `nodeId` (convert `-` to `:` in nodeId).
 - Call `mcp__plugin_figma_figma__get_design_context` with the nodeId and fileKey for each breakpoint frame (desktop, tablet, mobile).
 - The output is React+Tailwind — treat it as a **reference, not final code**. You will rewrite it as plain HTML/CSS/JS.

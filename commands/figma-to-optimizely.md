@@ -14,9 +14,8 @@ Procedure:
 1. **Invoke the `figma-to-optimizely` skill.** The skill is bundled with this plugin. Follow its workflow exactly:
    - Parse the Figma URL (extract `fileKey` and `nodeId`, convert `-` to `:` in nodeId).
    - Verify Figma MCP is available (`mcp__plugin_figma_figma__*` or `mcp__figma-desktop__*`). If not, stop and tell the user to install the Figma plugin.
-   - If the experiment folder doesn't exist, run the equivalent of `/new-experiment $2` first.
+   - Create `experiments/$2/output/Optimizely/` and `experiments/$2/qa/` if they don't already exist (use `mkdir -p`). No `input/` folder — the team tracks briefs and hypotheses elsewhere.
    - Read the Figma design context across breakpoints (desktop / tablet / mobile if available).
-   - Read the brief from `experiments/$2/input/brief.md` if present.
 
 2. **Generate the four widget files** in `experiments/$2/output/Optimizely/`:
    - `index.html` — semantic markup with `{{extension.fieldName}}` template variables and the root id `optimizely-extension-{{ extension.$instance }}`.
