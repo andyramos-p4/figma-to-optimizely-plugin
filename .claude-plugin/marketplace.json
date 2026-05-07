@@ -3,7 +3,7 @@
   "name": "figma-to-optimizely",
   "description": "Convert Figma designs into production-ready Optimizely Web Experiment widgets with a local preview.",
   "owner": {
-    "name": "Sleepopolis Design"
+    "name": "Pillar4 Media"
   },
   "plugins": [
     {
